@@ -1,0 +1,5 @@
+php artisan make:seeder admin seeder   --> to fill the values in the data base 
+
+php artisan db:seed
+
+php artisan make:mail websitemail
