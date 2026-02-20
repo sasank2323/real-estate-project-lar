@@ -1,5 +1,28 @@
-php artisan make:seeder admin seeder   --> to fill the values in the data base 
+php artisan make:seeder Adminseeder   --> to fill the values in the data base 
+
+php artisan db:seed --class=Adminseeder
 
 php artisan db:seed
 
+this is for template of mail and add view file in resorces 
+
 php artisan make:mail websitemail
+
+php artisan make:middleware user 
+
+use mailtrap.io for smtp in .env file configure it 
+
+when ever chnaging the config file 
+
+
+php artisan config:clear 
+
+php artisan route:clear
+
+php artisan config:cache
+
+php artisan view:clear
+
+php artisan cache:clear
+
+php artisan optimize 

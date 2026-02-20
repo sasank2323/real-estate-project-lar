@@ -18,9 +18,10 @@ class Websitemail extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct($subject, $body)
     {
-        //
+        $this->subject = $subject;
+        $this->body = $body;
     }
 
     /**
@@ -29,7 +30,7 @@ class Websitemail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Websitemail',
+            subject: $this->subject,
         );
     }
 
@@ -39,7 +40,8 @@ class Websitemail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'email',
+            with: ['subject' => $this->subject, 'body' => $this->body]
         );
     }
 
