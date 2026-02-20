@@ -26,3 +26,16 @@ php artisan view:clear
 php artisan cache:clear
 
 php artisan optimize 
+
+
+to see list of routes :  php artisan route:list
+
+_ _ _ _ _ _ _ _ _
+
+php artisan make :migration "sasank table" --create='sasank'
+
+php artisan migarte 
+
+you can check here migration name in project is sasank_table and table name in db is sasank
+
+_ _ _ _ _ _ _ _ _ 
