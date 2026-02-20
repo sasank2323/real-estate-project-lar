@@ -36,6 +36,13 @@ php artisan make :migration "sasank table" --create='sasank'
 
 php artisan migarte 
 
+php artisan migration:refresh  -> after creation of table if you want to add a cloumn that will not go to the db it will give nothing to migrate so we have to use refresh so it will drop all the tables so you can migrate again
+                               -> problem here is it will drop all the tables
+
+php artisan migration:refresh  --path=database/migrations/2026_01_06_170916_email_data.php
+
+                                -> these will only drop one table rest will be fine now you can migrate again for this specific table 
+
 you can check here migration name in project is sasank_table and table name in db is sasank
 
 _ _ _ _ _ _ _ _ _ 

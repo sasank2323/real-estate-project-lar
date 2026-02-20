@@ -27,6 +27,11 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('admin');
+        // when you do php artisan migration:refresh --path=database/migrations/2025_12_25_100426_create_admin_table.php
+        //now this will drop this column from admin table but not drop the whole table because we have some data in this table and if we drop the whole table then we will lose all the data in this table so we will drop only the column which we have added in this migration file
+        Schema::table('admin', function (Blueprint $table) {
+            $table->dropColumn(['name', 'token']);
+        });
+        //Schema::dropIfExists('admin');
     }
 };
