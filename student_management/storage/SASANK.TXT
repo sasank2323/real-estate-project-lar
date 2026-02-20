@@ -45,4 +45,14 @@ php artisan migration:refresh  --path=database/migrations/2026_01_06_170916_emai
 
 you can check here migration name in project is sasank_table and table name in db is sasank
 
+
+                         --> if you want to add a column to a exisiting table then use this 
+
+php artisan make:migration add_status_column --table=posts
+
+php artisan migrate:fresh          --> differnece between refresh and fresh is refresh will go first to down and drop according to down function if it was column then drop column and create table again but fresh drop all the tables with out going to down function and recreates it 
+
+php artisan migration:rollback     --> roll back recent migration  last migrated table or cloumn will be dropped 
+
+php artisan migrate:rollback --step=2
 _ _ _ _ _ _ _ _ _ 
