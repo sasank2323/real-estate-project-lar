@@ -31,6 +31,9 @@ return new class extends Migration
         //now this will drop this column from admin table but not drop the whole table because we have some data in this table and if we drop the whole table then we will lose all the data in this table so we will drop only the column which we have added in this migration file
         Schema::table('admin', function (Blueprint $table) {
             $table->dropColumn(['name', 'token']);
+            // if it was a foreign key then we have to drop the foreign key first and then drop the column 
+             $table->dropForeign(['email']);
+             $table->dropColumn('email');
         });
         //Schema::dropIfExists('admin');
     }
