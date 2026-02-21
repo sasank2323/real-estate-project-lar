@@ -5,6 +5,7 @@ use App\Http\Controllers\Front\FrontController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\errortesting;
+use App\Http\Controllers\sasank;
 
 
 Route::get('/', function () {
@@ -65,3 +66,7 @@ Route::prefix('admin')->group(function () {
 
 
 Route::get('/error/{id}', [errortesting::class, 'show'])->name('error.testing');
+
+
+ Route::get('/sasank',[sasank::class,'index']);
+ Route::get('/sasank/create',[sasank::class,'create']);

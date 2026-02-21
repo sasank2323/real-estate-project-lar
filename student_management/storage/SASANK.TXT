@@ -67,3 +67,11 @@ _ _ _
 FORM VALIDATION SEPERATAION LOGIC HERE MAKE IT TRUE 
 
 php artisan make:request UserValidation/submit_registration
+
+_ _ _ 
+
+this will create a crud controller with all the functions 
+
+php artisan make:controller postcontroller --resorce
+
+php artisan route:list --except-vendor
