@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Services\EmailUpdateCreate;
+use App\Http\Requests\UserValidation\submit_registration;
 
 class UserController extends Controller
 {
@@ -20,13 +21,8 @@ class UserController extends Controller
         return view('user.registration');
     }
 
-    public function registration_submit(Request $request){
+    public function registration_submit(submit_registration $request){
         // return $request->all();
-        $request->validate([
-            'name'=>'required|string',
-            'email'=>'required|email',
-            'password'=>'required|min:6'
-        ]);
         $data= [
             'name'=>$request->name,
             'email'=>$request->email,
