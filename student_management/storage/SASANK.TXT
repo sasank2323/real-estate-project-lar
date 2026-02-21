@@ -70,3 +70,10 @@ FORM VALIDATION SEPERATAION LOGIC HERE MAKE IT TRUE
 _ _ _ 
 
 php artisan make:request UserValidation/submit_registration
+
+
+
+_ _ _ 
+
+
+php artisan make:scope published

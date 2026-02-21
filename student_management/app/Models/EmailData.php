@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use App\Models\Scopes\published;
 
 class EmailData extends Model
 {
@@ -18,6 +19,20 @@ class EmailData extends Model
             get: fn ($value) => ucfirst($value),
             set: fn ($value) => strtolower($value)
         );
+    }
+    //global scope example calling in controller {post::withoutGlobalScope(published::class)->get()} to get all data without scope other wise it will return only published data or apply this filter automatically to all queries
+    protected static function booted()
+    {
+        // static::creating(function ($emailData) {
+        //     $emailData->created_at = now();
+        // });
+        static::addGlobalScope(new published);
+    }
+
+    //local scope example calling in controller { post::published()->get()} to get only published data
+    public function scopePublished($query)
+    {
+        return $query->where('created_at', '<=', now());
     }
 
     //same but in old style 
@@ -66,3 +81,5 @@ class EmailData extends Model
 // WELCOME EMAIL
 
 // 🔥 The database value stays unchanged.
+
+//sasank 
