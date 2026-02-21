@@ -56,3 +56,8 @@ php artisan migration:rollback     --> roll back recent migration  last migrated
 
 php artisan migrate:rollback --step=2
 _ _ _ _ _ _ _ _ _ 
+
+
+php artisan vendor:publish 
+
+then choose 10 then auto matically error files will get added  to views 

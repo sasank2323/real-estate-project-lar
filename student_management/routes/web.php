@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Front\FrontController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\User\UserController;
+use App\Http\Controllers\errortesting;
 
 
 Route::get('/', function () {
@@ -60,3 +61,7 @@ Route::prefix('admin')->group(function () {
    Route::get('/reset-password/{token}/{email}',[AdminController::class,'reset_password'])->name('admin_reset_password');
    Route::post('/reset-password/{token}/{email}',[AdminController::class,'reset_password_submit'])->name('admin.reset.password.submit');
 });
+
+
+
+Route::get('/error/{id}', [errortesting::class, 'show'])->name('error.testing');
