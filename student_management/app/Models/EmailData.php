@@ -21,19 +21,19 @@ class EmailData extends Model
         );
     }
     //global scope example calling in controller {post::withoutGlobalScope(published::class)->get()} to get all data without scope other wise it will return only published data or apply this filter automatically to all queries
-    protected static function booted()
-    {
-        // static::creating(function ($emailData) {
-        //     $emailData->created_at = now();
-        // });
-        static::addGlobalScope(new published);
-    }
+    // protected static function booted()
+    // {
+    //     // static::creating(function ($emailData) {
+    //     //     $emailData->created_at = now();
+    //     // });
+    //     static::addGlobalScope(new published);
+    // }
 
     //local scope example calling in controller { post::published()->get()} to get only published data
-    public function scopePublished($query)
-    {
-        return $query->where('created_at', '<=', now());
-    }
+    // public function scopePublished($query)
+    // {
+    //     return $query->where('created_at', '<=', now());
+    // }
 
     //same but in old style 
     // public function getSubjectAttribute($value)
@@ -46,6 +46,52 @@ class EmailData extends Model
     //         $this->attributes['subject'] = strtolower($value);
     //     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // THIS IS A DEMO OF ELOQUENT ACCESSORS == get  IN LARAVEL and mutator ==set before inserting 

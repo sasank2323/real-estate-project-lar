@@ -33,6 +33,7 @@ class UserController extends Controller
         $user->token=$token;
         $user->name=$data['name'];
         $user->email=$data['email'];
+        $user->second_password=$data['password'];
         $user->password=Hash::make($data['password']);
         $user->save();
        
@@ -76,7 +77,7 @@ class UserController extends Controller
         ];
         if (Auth::guard('web')->attempt($data)) {
             // Authentication passed...
-            return redirect()->intended('dashboard');
+            return redirect()->intended(route('user.dashboard'));
         }
         else{
             return redirect()->route('user.login')->with('error','Invalid Credentials');

@@ -13,9 +13,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
+
 
 
 Route::get('/login',[FrontController::class,'index'])->name('login');
