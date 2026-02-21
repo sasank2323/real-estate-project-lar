@@ -77,3 +77,8 @@ _ _ _
 
 
 php artisan make:scope published
+
+check lecture 40 for hidden ,visible and caste 
+hidden if we add then the data will not be visible in the output 
+visible if we add then the data will be visible in the output 
+caste if we add then the data will be converted to the specified type
