@@ -1,0 +1,7 @@
+user table : id ,name 
+
+roles      : id ,name
+
+roles_user : user_id,role_id 
+
+just check video or larvel document 

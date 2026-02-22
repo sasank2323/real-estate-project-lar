@@ -61,4 +61,9 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasOne(UserKycDetails::class,'user_id','id');
     }
+
+    public function sitevisit(): HasMany
+    {
+        return $this->hasMany(sitevisit::class,'user_id','id');
+    }
 }

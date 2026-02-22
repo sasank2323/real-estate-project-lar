@@ -6,9 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use App\Models\Scopes\published;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 class EmailData extends Model
 {
     //
+     use HasFactory;
     protected $table = 'email_data';
     public $timestamps = false;
     protected $fillable = ['email', 'subject', 'message', 'created_at'];

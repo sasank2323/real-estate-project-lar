@@ -78,7 +78,25 @@ _ _ _
 
 php artisan make:scope published
 
-check lecture 40 for hidden ,visible and caste 
+check lecture 40,43,46,47 for hidden ,visible and caste 
 hidden if we add then the data will not be visible in the output 
 visible if we add then the data will be visible in the output 
 caste if we add then the data will be converted to the specified type
+
+
+_ _ _ 
+seeder you will specify the table values  vs factory automatic creation of value 
+
+php artisan make:seeder userseeder
+
+php artisan db:seed --class=userseeder
+
+php artisan db:seed
+
+first table name + seeder = userseeder that is the convension 
+
+FACTORY:
+
+php artisan make:factory UserFactory
+
+after that you can seed it from seeder 
