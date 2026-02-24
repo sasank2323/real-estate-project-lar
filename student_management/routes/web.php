@@ -68,3 +68,4 @@ Route::get('/error/{id}', [errortesting::class, 'show'])->name('error.testing');
 
  Route::get('/sasank',[sasank::class,'index']);
  Route::get('/sasank/create',[sasank::class,'create']);
+ Route::get('/send_email_job',[errortesting::class,'send_email_job']);

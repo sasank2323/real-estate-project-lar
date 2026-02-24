@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\UserKycDetails;
+use App\Jobs\AddFakeData;
 
 class errortesting extends Controller
 {
@@ -23,6 +24,12 @@ class errortesting extends Controller
         else{
             return view('welcome');
         }
+    }
+
+    public function send_email_job()
+    {
+        // this is for testing jobs 
+        AddFakeData::dispatch('sai','sasank');
     }
 
 

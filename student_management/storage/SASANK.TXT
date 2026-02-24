@@ -100,3 +100,16 @@ FACTORY:
 php artisan make:factory UserFactory
 
 after that you can seed it from seeder 
+
+
+php artisan tinker it was just a cli to write commands thats it 
+
+video = 54 yajra datatables laravel 12  that will send data with limit 
+
+check video 59,60 listner ,event ,observer 
+
+php artisan make:job FakeEMailData
+
+after creation of job you can run 
+
+php artisan queue:work 
