@@ -26,8 +26,12 @@ class errortesting extends Controller
         }
     }
 
-    public function send_email_job()
+    public function send_email_job($id=null)
     {
+        if($id==1)
+            {
+                throw new \Exception('This is a test exception for testing error handling.');
+            }
         // this is for testing jobs 
         AddFakeData::dispatch('sai','sasank');
     }

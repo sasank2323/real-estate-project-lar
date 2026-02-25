@@ -121,4 +121,13 @@ php artisan schedule:list : to get the list
 
 php artisan make:command SendEMailToCx
 
-php artisan shedule:work
+php artisan schedule:work
+
+
+Testing started 
+
+php artisan test            -> to run tests 
+
+php artisan make:test HomePageTest
+
+php artisan make:test unitTest --unit    : for creating unit tests
