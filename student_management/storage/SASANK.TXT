@@ -113,3 +113,12 @@ php artisan make:job FakeEMailData
 after creation of job you can run 
 
 php artisan queue:work 
+
+
+shedule cron jobs 
+
+php artisan schedule:list : to get the list  
+
+php artisan make:command SendEMailToCx
+
+php artisan shedule:work
